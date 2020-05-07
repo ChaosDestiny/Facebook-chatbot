@@ -10,10 +10,10 @@ from rasa.core.channels.facebook import FacebookInput
 from rasa.core.agent import Agent
 from rasa.core.interpreter import RasaNLUInterpreter
 import os
-from rasa_core.utils import EndpointConfig
+from rasa.core.utils import EndpointConfig
 # load your trained agent
-interpreter = RasaNLUInterpreter("models/20200507-174305.tar.gz")
-MODEL_PATH = "models/20200507-174305.tar.gz"
+interpreter = RasaNLUInterpreter("models/20200507-174305.tar.gz/nlu")
+MODEL_PATH = "models/20200507-174305.tar.gz/core"
 action_endpoint = EndpointConfig(url="https://luna-chatbot-prj2.herokuapp.com/webhook")
 
 agent = Agent.load(MODEL_PATH, interpreter=interpreter)
