@@ -1,1 +1,1 @@
-web: python facebook.py && python -m rasa_sdk.endpoint --actions actions 
+web: python facebook.py && rasa run actions
