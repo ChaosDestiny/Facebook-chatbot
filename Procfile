@@ -1,1 +1,1 @@
-web: rasa run actions 
+web: python facebook.py
