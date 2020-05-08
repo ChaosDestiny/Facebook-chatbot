@@ -16,7 +16,7 @@ interpreter = RasaNLUInterpreter("models/nlu/")
 MODEL_PATH = "models/20200507-174305.tar.gz"
 action_endpoint = EndpointConfig(url="https://lunachatbot-prj2-actions.herokuapp.com/webhook")
 
-agent = Agent.load(MODEL_PATH, interpreter=interpreter)
+agent = Agent.load(MODEL_PATH, interpreter=interpreter, action_endpoint=action_endpoint)
 input_channel = FacebookInput(
     fb_verify="jackfrost",
     # you need tell facebook this token, to confirm your URL
