@@ -1,5 +1,6 @@
 actions:
 - action_play_music
+- action_tell_story
 - utter_ask_color
 - utter_ask_food
 - utter_ask_name
@@ -45,7 +46,7 @@ intents:
 - play_music:
     ignore_entities: []
     use_entities: true
-- read_story:
+- tell_story:
     ignore_entities: []
     use_entities: true
 responses:
@@ -63,13 +64,18 @@ responses:
   utter_did_that_help:
   - text: Did that help you?
   utter_goodbye:
-  - text: Bye
+  - text: Tạm biệt
+  - text: Hẹn gặp lại
+  - text: Bye bye
   utter_greet:
-  - text: Hey! How are you?
+  - text: Xin chào, tôi là Luna
+  - text: Chào bạn, tôi có thể giúp gì cho bạn không?
+  - text: Chào bạn
+  - text: Xin chào, rất vui được gặp bạn
   utter_happy:
   - text: Great, carry on!
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: Tôi là bot, được hỗ trợ bởi Rasa.
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60

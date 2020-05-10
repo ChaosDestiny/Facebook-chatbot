@@ -6,7 +6,7 @@ from rasa.core.utils import EndpointConfig
 
 # load your trained agent
 interpreter = RasaNLUInterpreter("models/nlu/")
-MODEL_PATH = "models/20200507-174305.tar.gz"
+MODEL_PATH = "models/20200509-111426.tar.gz"
 action_endpoint = EndpointConfig(url="https://lunachatbot-prj2-actions.herokuapp.com/webhook")
 agent = Agent.load(MODEL_PATH, interpreter=interpreter, action_endpoint=action_endpoint)
 

@@ -3,16 +3,19 @@
     "action_listen": {
       "slots": []
     },
-    "utter_happy": {
+    "utter_goodbye": {
       "slots": []
     },
-    "utter_goodbye": {
+    "action_tell_story": {
       "slots": []
     },
     "utter_iamabot": {
       "slots": []
     },
     "action_play_music": {
+      "slots": []
+    },
+    "utter_happy": {
       "slots": []
     }
   },
@@ -28,7 +31,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200507-174251",
+  "trained_at": "20200509-111349",
   "rasa": "1.7.0",
   "tensorflow": "1.15.0",
   "sklearn": "0.20.4"
