@@ -1,5 +1,5 @@
 import os
-from rasa.core.channels.facebook import RasaChatInput
+from rasa.core.channels.rasa_chat import RasaChatInput
 from rasa.core.agent import Agent
 from rasa.core.interpreter import RasaNLUInterpreter
 from rasa.core.utils import EndpointConfig
