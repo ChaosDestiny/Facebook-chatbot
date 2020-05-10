@@ -34,17 +34,6 @@ class ActionPlayMusic(Action):
     def name(self) -> Text:
         return "action_play_music"
     
-    def url_search(self, search_string, max_search):
-        textToSearch = search_string
-        query = urllib.parse.quote(textToSearch)
-        url = "https://www.youtube.com/results?search_query=" + query
-        response = urllib.request.urlopen(url)
-        html = response.read()
-        soup = BeautifulSoup(html, 'html.parser')
-        vid = soup.findAll(attrs={'class':'yt-uix-tile-link'})[0]
-        url = 'https://www.youtube.com' + vid['href']          
-        return url
-    
     def run(self, dispatcher, tracker, domain):
         
         song = tracker.get_slot('song')
@@ -56,8 +45,34 @@ class ActionPlayMusic(Action):
             soup = BeautifulSoup(html, 'html.parser')
             vid = soup.findAll(attrs={'class':'yt-uix-tile-link'})[0]
             url = 'https://www.youtube.com' + vid['href']
-            webbrowser.open(url)
-            dispatcher.utter_message(text="Here your are.")
+            webbrowser.open_new_tab(url)
+            dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
-            dispatcher.utter_message(text="What song do you want to listen to?")
+            dispatcher.utter_message(text="Bạn muốn nghe bài gì?")
         return [SlotSet("song", None)]
+    
+class ActionTellStory(Action):
+    def name(self) -> Text:
+        return "action_tell_story"
+    
+    def run(self, dispatcher, tracker, domain):
+        
+        story = tracker.get_slot('story')
+        if (story != None):
+            query = urllib.parse.quote(story)
+            url = "https://truyencotich.vn/index.php?s=" + query
+            response = urllib.request.urlopen(url)
+            html = response.read()
+            soup = BeautifulSoup(html, 'html.parser')
+            tale = soup.find_all("a", limit=20)[13]
+            url = tale['href']
+            if (url.find('video') == -1):
+                return url
+            else:
+                tale = soup.find_all("a", limit=20)[14]
+                url = tale['href']   
+            webbrowser.open_new_tab(url)
+            dispatcher.utter_message(text="Của bạn đây: " + url)
+        else:
+            dispatcher.utter_message(text="Bạn muốn tôi kể câu chuyện gì?")
+        return [SlotSet("story", None)]

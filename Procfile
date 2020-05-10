@@ -1,1 +1,1 @@
-web: python facebook.py
+web: python myown_chatbot.py

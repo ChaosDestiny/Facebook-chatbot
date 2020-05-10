@@ -33,13 +33,31 @@
 ## play music
 * greet
     - utter_greet
-* play_music
+* play_music{"song": "Fly away"}
+    - slot{"song": "Fly away"}
     - action_play_music
     
 ## play music 2
 * greet
     - utter_greet
-* play_music
+* play_music{"song": "Con cò bé bé"}
+    - slot{"song": "Con cò bé bé"}
     - action_play_music
+* goodbye
+    - utter_goodbye
+    
+## tell story
+* greet
+    - utter_greet
+* tell_story{"story": "Thạch Sanh"}
+    - slot{"story": "Thạch Sanh"}
+    - action_tell_story
+    
+## tell story
+* greet
+    - utter_greet
+* tell_story{"story": "Tấm cám"}
+    - slot{"story": "Tấm cám"}
+    - action_tell_story
 * goodbye
     - utter_goodbye

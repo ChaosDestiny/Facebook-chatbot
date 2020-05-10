@@ -34,17 +34,6 @@ class ActionPlayMusic(Action):
     def name(self) -> Text:
         return "action_play_music"
     
-    def url_search(self, search_string, max_search):
-        textToSearch = search_string
-        query = urllib.parse.quote(textToSearch)
-        url = "https://www.youtube.com/results?search_query=" + query
-        response = urllib.request.urlopen(url)
-        html = response.read()
-        soup = BeautifulSoup(html, 'html.parser')
-        vid = soup.findAll(attrs={'class':'yt-uix-tile-link'})[0]
-        url = 'https://www.youtube.com' + vid['href']          
-        return url
-    
     def run(self, dispatcher, tracker, domain):
         
         song = tracker.get_slot('song')
@@ -55,9 +44,9 @@ class ActionPlayMusic(Action):
         soup = BeautifulSoup(html, 'html.parser')
         vid = soup.findAll(attrs={'class':'yt-uix-tile-link'})[0]
         url = 'https://www.youtube.com' + vid['href']
-        webbrowser.open(url)
+        webbrowser.open_new_tab(url)
         
-        dispatcher.utter_message(text="Here your are.")
+        dispatcher.utter_message(text="Here your are: " + url)
         return []
     
     

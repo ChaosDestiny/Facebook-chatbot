@@ -18,7 +18,7 @@ intents:
   - ask_color
   - ask_food
   - play_music
-  - read_story
+  - tell_story
 
 entities:
   - name
@@ -28,7 +28,10 @@ entities:
     
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Xin chào, tôi là Luna"
+  - text: "Chào bạn, tôi có thể giúp gì cho bạn không?"
+  - text: "Chào bạn"
+  - text: "Xin chào, rất vui được gặp bạn"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -41,17 +44,21 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Tạm biệt"
+  - text: "Hẹn gặp lại"
+  - text: "Bye bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Tôi là bot, được hỗ trợ bởi Rasa."
   
   utter_ask_name:
       - text: 'What is your name?'
       - text: 'I am Luna, what is your name?'
+      
   utter_ask_color:
       - text: 'What is your favorite color?'
       - text: 'What color do you like the most?'
+      
   utter_ask_food:
       - text: 'What is your favorite food?'
 
@@ -67,6 +74,7 @@ actions:
     - utter_ask_color
     - utter_ask_food
     - action_play_music
+    - action_tell_story
     
 session_config:
   session_expiration_time: 60
