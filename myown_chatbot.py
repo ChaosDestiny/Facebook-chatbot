@@ -1,12 +1,11 @@
 import os
 from rasa.core.channels.rasa_chat import RasaChatInput
-from rasa.core.channels.channel import CollectingOutputChannel, UserMessage, RestInput
+from rasa.core.channels.channel import CollectingOutputChannel, UserMessage
 from rasa.core.agent import Agent
 from rasa.core.interpreter import RasaNLUInterpreter
 from rasa.core.utils import EndpointConfig
 from rasa.core import utils
 from flask import render_template, Blueprint, jsonify, request
-from sanic import response
 
 # load your trained agent
 interpreter = RasaNLUInterpreter("models/nlu/")
@@ -14,10 +13,10 @@ MODEL_PATH = "models/20200511-190147.tar.gz"
 action_endpoint = EndpointConfig(url="https://lunachatbot-prj2-actions.herokuapp.com/webhook")
 agent = Agent.load(MODEL_PATH, interpreter=interpreter, action_endpoint=action_endpoint)
 
-class MyNewInput(RestInput):
+class MyNewInput(RasaChatInput):
     @classmethod
     def name(cls):
-        return "rest"
+        return "rasa"
     
     def _check_token(self, token):
         if token == 'jackfrost':
@@ -44,7 +43,7 @@ class MyNewInput(RestInput):
             text = self._extract_message(request)
             should_use_stream = utils.bool_arg("stream", default=False)
             if should_use_stream:
-                return response.stream(self.stream_response(on_new_message, text, sender_id), content_type='text/event-stream')
+                return Response(self.stream_response(on_new_message, text, sender_id), content_type='text/event-stream')
             else:
                 collector = CollectingOutputChannel()
                 on_new_message(UserMessage(text, collector, sender_id))
