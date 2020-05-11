@@ -1,9 +1,12 @@
 {
-    "language": "vi",
+    "language": "en",
     "pipeline": [
         {
-            "name": "VietnameseTokenizer",
-            "class": "rasa.nlu.tokenizers.vi_tokenizer.VietnameseTokenizer"
+            "intent_tokenization_flag": false,
+            "intent_split_symbol": "_",
+            "case_sensitive": true,
+            "name": "WhitespaceTokenizer",
+            "class": "rasa.nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer"
         },
         {
             "name": "RegexFeaturizer",
@@ -76,7 +79,7 @@
             "min_df": 1,
             "max_df": 1.0,
             "min_ngram": 1,
-            "max_ngram": 4,
+            "max_ngram": 5,
             "max_features": null,
             "lowercase": true,
             "OOV_token": null,
@@ -122,6 +125,6 @@
             "class": "rasa.nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier"
         }
     ],
-    "trained_at": "20200509-111425",
+    "trained_at": "20200511-190147",
     "rasa_version": "1.7.0"
 }
