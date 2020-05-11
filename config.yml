@@ -1,7 +1,7 @@
-language: "vi"
+language: "en"
 
 pipeline:
-- name: "VietnameseTokenizer"
+- name: "WhitespaceTokenizer"
 - name: "RegexFeaturizer"
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
@@ -9,7 +9,7 @@ pipeline:
 - name: "CountVectorsFeaturizer"
   analyzer: "char_wb"
   min_ngram: 1
-  max_ngram: 4
+  max_ngram: 5
 - name: "EmbeddingIntentClassifier"
   batch_strategy: sequence
   

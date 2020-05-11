@@ -49,7 +49,7 @@ class ActionPlayMusic(Action):
             dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
             dispatcher.utter_message(text="Bạn muốn nghe bài gì?")
-        return [SlotSet("song", None)]
+        return []
     
 class ActionTellStory(Action):
     def name(self) -> Text:
@@ -75,4 +75,4 @@ class ActionTellStory(Action):
             dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
             dispatcher.utter_message(text="Bạn muốn tôi kể câu chuyện gì?")
-        return [SlotSet("story", None)]
+        return []
