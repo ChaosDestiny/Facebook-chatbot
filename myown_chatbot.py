@@ -9,7 +9,7 @@ from flask import render_template, Blueprint, jsonify, request
 
 # load your trained agent
 interpreter = RasaNLUInterpreter("models/nlu/")
-MODEL_PATH = "models/20200511-190147.tar.gz"
+MODEL_PATH = "models/20200512-212705.tar.gz"
 action_endpoint = EndpointConfig(url="https://lunachatbot-prj2-actions.herokuapp.com/webhook")
 agent = Agent.load(MODEL_PATH, interpreter=interpreter, action_endpoint=action_endpoint)
 
