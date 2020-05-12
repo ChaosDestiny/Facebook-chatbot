@@ -21,7 +21,7 @@ input_channel = FacebookInput(
     fb_verify="jackfrost",
     # you need tell facebook this token, to confirm your URL
     fb_secret="4ad8cdf285aeef2548b23c130cd6f56c", # your app secret
-    fb_access_token="EAASmSto8E9IBAABZBgqhtuXkyV2PoCrxVoQoG2FsQC5HagM97IZA7KuQzZC48xKC7sIYPT2OZBsM2sY3bxN0RZCUutVU6g4TF8Ow5uaRq64tv6axkHuDxLVZBpTaRS95qEMhIkHnixIaIU5Ql9weuYuXOxlZAreqScqjq7AkrYwLwZDZD"
+    fb_access_token="EAASmSto8E9IBANlkhOp0pcoMXdWJanepzZBBAmQ9ZBsm07CYlwG7qqIgb5ccUvGWGdZCJRS6U72W4j1MctoZBUhACihyuAhEUp5wAxsPBSkiMXADiKHWPA8LPErMz5WywZBWg043qnsBJZBr42HpPdPxcoAnWYJKQfc2DNANgERwZDZD"
     
     # token for the page you subscribed to
 )
