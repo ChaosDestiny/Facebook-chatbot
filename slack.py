@@ -18,4 +18,4 @@ input_channel = SlackInput(
             # the name of your channel to which the bot posts (optional)
     )
 # set serve_forever=False if you want to keep the server running
-s = agent.handle_channels([input_channel],  int(os.environ.get('PORT', 5004)), serve_forever=True)
+s = agent.handle_channels([input_channel],  int(os.environ.get('PORT', 5004)))
