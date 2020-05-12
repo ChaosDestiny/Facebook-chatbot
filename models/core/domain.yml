@@ -1,23 +1,26 @@
 actions:
 - action_play_music
 - action_tell_story
+- image
+- utter_ask_action
 - utter_ask_color
 - utter_ask_food
 - utter_ask_name
 - utter_ask_play_again
 - utter_cheer_up
+- utter_default
 - utter_did_that_help
 - utter_goodbye
 - utter_greet
 - utter_happy
 - utter_iamabot
+- utter_suggest_song
 config:
   store_entities_as_slots: true
 entities:
 - name
 - song
 - story
-- time
 forms: []
 intents:
 - greet:
@@ -57,35 +60,91 @@ intents:
     ignore_entities: []
     use_entities: true
 responses:
+  image:
+  - text: h
+  - text: t
+  - text: t
+  - text: p
+  - text: s
+  - text: ':'
+  - text: /
+  - text: /
+  - text: i
+  - text: .
+  - text: i
+  - text: m
+  - text: g
+  - text: u
+  - text: r
+  - text: .
+  - text: c
+  - text: o
+  - text: m
+  - text: /
+  - text: n
+  - text: G
+  - text: F
+  - text: '1'
+  - text: K
+  - text: '8'
+  - text: f
+  - text: .
+  - text: j
+  - text: p
+  - text: g
+  utter_ask_action:
+  - text: Bạn cần giúp gì không?
+  - text: Bạn cần tôi giúp gì nữa không?
+  - text: Tôi có thể giúp gì nữa không?
+  - text: Bạn muốn tôi làm gì nữa không?
+  - text: Tôi có thể giúp gì cho bạn?
   utter_ask_color:
-  - text: What is your favorite color?
-  - text: What color do you like the most?
+  - text: Bạn thích màu gì nhất?
+  - text: Màu sác yêu thích của bạn là gì?
   utter_ask_food:
-  - text: What is your favorite food?
+  - text: Bạn thích ăn món gì?
+  - text: Món ăn ưa thích của bạn là gì?
+  - text: Món ăn yêu thích của bạn là gì?
   utter_ask_name:
-  - text: What is your name?
-  - text: I am Luna, what is your name?
+  - text: Tên bạn là gì?
+  - text: Tôi là Luna, tên bạn là gì?
   utter_ask_play_again:
   - text: Bạn có muốn nghe lại bài này không?
   - text: Bạn có cần tôi phát lại bài này không?
+  - text: Bạn có muốn nghe lại lần nữa không?
+  - text: Bạn muốn nghe lại bài hát này chứ?
   utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+  - text: 'Mong rằng bức ảnh này sẽ làm bạn vui lên:'
+  utter_default:
+  - text: Xin lỗi, tôi không hiểu ý của bạn.
+  - text: Rất tiếc, tôi không rõ ý của bạn.
+  - text: Xin lỗi, bạn có thể nói rõ hơn được không?
   utter_did_that_help:
-  - text: Did that help you?
+  - text: Bạn có thấy ổn hơn không?
+  - text: Bạn có khá hơn không?
+  - text: Nó có giúp bạn thấy khá hơn không?
   utter_goodbye:
   - text: Tạm biệt
   - text: Hẹn gặp lại
   - text: Bye bye
+  - text: Tạm biệt bạn nhé
+  - text: Hẹn gặp lại sau nhé
+  - text: Chào tạm biệt
   utter_greet:
   - text: Xin chào, tôi là Luna
   - text: Chào bạn, tôi có thể giúp gì cho bạn không?
   - text: Chào bạn
   - text: Xin chào, rất vui được gặp bạn
   utter_happy:
-  - text: Great, carry on!
+  - text: Tuyệt quá!
+  - text: Hay quá!
+  - text: Tốt rồi.
   utter_iamabot:
   - text: Tôi là bot, được hỗ trợ bởi Rasa.
+  utter_suggest_song:
+  - text: Bạn có muốn nghe một bài hát không?
+  - text: Bạn có muốn nghe nhạc không?
+  - text: bạn có muốn tôi phát nhạc cho bạn không?
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
@@ -99,10 +158,6 @@ slots:
     initial_value: null
     type: rasa.core.slots.TextSlot
   story:
-    auto_fill: true
-    initial_value: null
-    type: rasa.core.slots.TextSlot
-  time:
     auto_fill: true
     initial_value: null
     type: rasa.core.slots.TextSlot

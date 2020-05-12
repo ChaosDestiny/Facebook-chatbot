@@ -5,12 +5,17 @@
 - chào buổi chiều
 - Chào Luna
 - Chào robot
+- hi
+- hello
+- hey there
+- Xin chào Luna
 
 ## intent:goodbye
 - Tạm biệt
 - Chào tạm biệt
 - Hẹn gặp lại
 - Bai bai
+- Chào nhé
 
 ## intent:affirm
 - có
@@ -22,6 +27,7 @@
 - đúng rồi
 - đồng ý
 - yes
+- rồi
 
 ## intent:deny
 - không
@@ -33,6 +39,8 @@
 - no thanks
 - no no
 - không cần, cảm ơn nhé
+- chưa
+- Chưa đâu
 
 ## intent:mood_great
 - Rất tốt
@@ -43,6 +51,9 @@
 - Tôi ổn
 - Tôi cảm thấy rất tốt
 - Rất hài lòng
+- tốt
+- ổn
+- Kha khá
 
 ## intent:mood_unhappy
 - buồn

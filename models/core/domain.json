@@ -15,11 +15,9 @@
     "entity_name",
     "entity_song",
     "entity_story",
-    "entity_time",
     "slot_name_0",
     "slot_song_0",
     "slot_story_0",
-    "slot_time_0",
     "prev_action_listen",
     "prev_action_restart",
     "prev_action_session_start",
@@ -31,15 +29,19 @@
     "prev_action_back",
     "prev_action_play_music",
     "prev_action_tell_story",
+    "prev_image",
+    "prev_utter_ask_action",
     "prev_utter_ask_color",
     "prev_utter_ask_food",
     "prev_utter_ask_name",
     "prev_utter_ask_play_again",
     "prev_utter_cheer_up",
+    "prev_utter_default",
     "prev_utter_did_that_help",
     "prev_utter_goodbye",
     "prev_utter_greet",
     "prev_utter_happy",
-    "prev_utter_iamabot"
+    "prev_utter_iamabot",
+    "prev_utter_suggest_song"
   ]
 }

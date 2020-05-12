@@ -2,23 +2,26 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "song",
-        "story"
+        "story",
+        "song"
       ]
     },
-    "action_tell_story": {
-      "slots": []
-    },
-    "action_play_music": {
-      "slots": []
-    },
     "utter_happy": {
+      "slots": []
+    },
+    "utter_iamabot": {
       "slots": []
     },
     "utter_goodbye": {
       "slots": []
     },
-    "utter_iamabot": {
+    "utter_ask_play_again": {
+      "slots": []
+    },
+    "action_tell_story": {
+      "slots": []
+    },
+    "utter_ask_action": {
       "slots": []
     }
   },
@@ -34,7 +37,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200512-104312",
+  "trained_at": "20200512-212703",
   "rasa": "1.7.0",
   "tensorflow": "1.15.0",
   "sklearn": "0.20.4"

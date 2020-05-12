@@ -5,8 +5,6 @@ slots:
         type: text
     story:
         type: text
-    time:
-        type: text
         
 intents:
   - greet
@@ -26,7 +24,6 @@ entities:
   - name
   - song
   - story
-  - time
     
 responses:
   utter_greet:
@@ -36,51 +33,81 @@ responses:
   - text: "Xin chào, rất vui được gặp bạn"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Mong rằng bức ảnh này sẽ làm bạn vui lên:"
+  image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Bạn có thấy ổn hơn không?"
+  - text: "Bạn có khá hơn không?"
+  - text: "Nó có giúp bạn thấy khá hơn không?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Tuyệt quá!"
+  - text: "Hay quá!"
+  - text: "Tốt rồi."
 
   utter_goodbye:
   - text: "Tạm biệt"
   - text: "Hẹn gặp lại"
   - text: "Bye bye"
-
+  - text: "Tạm biệt bạn nhé"
+  - text: "Hẹn gặp lại sau nhé"
+  - text: "Chào tạm biệt"
+  
   utter_iamabot:
   - text: "Tôi là bot, được hỗ trợ bởi Rasa."
   
-  utter_ask_play_again:
-      - text: "Bạn có muốn nghe lại bài này không?"
-      - text: "Bạn có cần tôi phát lại bài này không?"
-      
   utter_ask_name:
-      - text: 'What is your name?'
-      - text: 'I am Luna, what is your name?'
-      
+  - text: 'Tên bạn là gì?'
+  - text: 'Tôi là Luna, tên bạn là gì?'
+  
   utter_ask_color:
-      - text: 'What is your favorite color?'
-      - text: 'What color do you like the most?'
-      
+  - text: 'Bạn thích màu gì nhất?'
+  - text: 'Màu sác yêu thích của bạn là gì?'
+  
   utter_ask_food:
-      - text: 'What is your favorite food?'
-
+  - text: 'Bạn thích ăn món gì?'
+  - text: 'Món ăn ưa thích của bạn là gì?'
+  - text: 'Món ăn yêu thích của bạn là gì?'
+  
+  utter_ask_action:
+  - text: 'Bạn cần giúp gì không?'
+  - text: 'Bạn cần tôi giúp gì nữa không?'
+  - text: 'Tôi có thể giúp gì nữa không?'
+  - text: 'Bạn muốn tôi làm gì nữa không?'
+  - text: 'Tôi có thể giúp gì cho bạn?'
+  
+  utter_ask_play_again:
+  - text: 'Bạn có muốn nghe lại bài này không?'
+  - text: 'Bạn có cần tôi phát lại bài này không?'
+  - text: 'Bạn có muốn nghe lại lần nữa không?'
+  - text: 'Bạn muốn nghe lại bài hát này chứ?'
+  
+  utter_default:
+  - text: 'Xin lỗi, tôi không hiểu ý của bạn.'
+  - text: 'Rất tiếc, tôi không rõ ý của bạn.'
+  - text: 'Xin lỗi, bạn có thể nói rõ hơn được không?'
+  
+  utter_suggest_song:
+  - text: 'Bạn có muốn nghe một bài hát không?'
+  - text: 'Bạn có muốn nghe nhạc không?'
+  - text: 'bạn có muốn tôi phát nhạc cho bạn không?'
         
 actions:
-    - utter_greet
-    - utter_cheer_up
-    - utter_did_that_help
-    - utter_happy
-    - utter_goodbye
-    - utter_iamabot
-    - utter_ask_name
-    - utter_ask_color
-    - utter_ask_food
-    - action_play_music
-    - action_tell_story
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_name
+  - utter_ask_play_again
+  - utter_ask_action
+  - utter_ask_color
+  - utter_ask_food
+  - utter_suggest_song
+  - action_play_music
+  - action_tell_story
     
 session_config:
   session_expiration_time: 60
