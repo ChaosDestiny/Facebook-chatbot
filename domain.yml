@@ -11,6 +11,8 @@ slots:
 intents:
   - greet
   - goodbye
+  - affirm
+  - deny
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -51,6 +53,10 @@ responses:
   utter_iamabot:
   - text: "Tôi là bot, được hỗ trợ bởi Rasa."
   
+  utter_ask_play_again:
+      - text: "Bạn có muốn nghe lại bài này không?"
+      - text: "Bạn có cần tôi phát lại bài này không?"
+      
   utter_ask_name:
       - text: 'What is your name?'
       - text: 'I am Luna, what is your name?'

@@ -36,6 +36,9 @@
 * play_music{"song": "Fly away"}
     - slot{"song": "Fly away"}
     - action_play_music
+    - utter_ask_play_again
+* affirm
+    - action_play_music
     
 ## play music 2
 * greet
@@ -44,6 +47,16 @@
     - slot{"song": "Con cò bé bé"}
     - action_play_music
 * goodbye
+    - utter_goodbye
+ 
+## play music
+* greet
+    - utter_greet
+* play_music{"song": "Fly away"}
+    - slot{"song": "Fly away"}
+    - action_play_music
+    - utter_ask_play_again
+* deny
     - utter_goodbye
     
 ## tell story

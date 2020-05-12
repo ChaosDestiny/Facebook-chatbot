@@ -6,19 +6,19 @@
         "story"
       ]
     },
-    "utter_goodbye": {
+    "action_tell_story": {
+      "slots": []
+    },
+    "action_play_music": {
       "slots": []
     },
     "utter_happy": {
       "slots": []
     },
-    "action_tell_story": {
+    "utter_goodbye": {
       "slots": []
     },
     "utter_iamabot": {
-      "slots": []
-    },
-    "action_play_music": {
       "slots": []
     }
   },
@@ -34,7 +34,7 @@
     "rasa.core.policies.keras_policy.KerasPolicy",
     "rasa.core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20200510-144253",
+  "trained_at": "20200512-104312",
   "rasa": "1.7.0",
   "tensorflow": "1.15.0",
   "sklearn": "0.20.4"

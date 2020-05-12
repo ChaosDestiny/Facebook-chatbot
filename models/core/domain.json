@@ -1,9 +1,11 @@
 {
   "states": [
+    "intent_affirm",
     "intent_ask_color",
     "intent_ask_food",
     "intent_ask_name",
     "intent_bot_challenge",
+    "intent_deny",
     "intent_goodbye",
     "intent_greet",
     "intent_mood_great",
@@ -32,6 +34,7 @@
     "prev_utter_ask_color",
     "prev_utter_ask_food",
     "prev_utter_ask_name",
+    "prev_utter_ask_play_again",
     "prev_utter_cheer_up",
     "prev_utter_did_that_help",
     "prev_utter_goodbye",

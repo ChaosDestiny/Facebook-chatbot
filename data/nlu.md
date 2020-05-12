@@ -12,6 +12,27 @@
 - Hẹn gặp lại
 - Bai bai
 
+## intent:affirm
+- có
+- ok
+- ừ
+- được
+- được đấy
+- ừ ok
+- đúng rồi
+- đồng ý
+- yes
+
+## intent:deny
+- không
+- đừng
+- không, cảm ơn
+- không cẩn đâu
+- không cần
+- no
+- no thanks
+- no no
+- không cần, cảm ơn nhé
 
 ## intent:mood_great
 - Rất tốt
