@@ -54,6 +54,10 @@
 - tốt
 - ổn
 - Kha khá
+- hihihi
+- Tôi rất vui
+- Mình đang vui
+- Vui lắm
 
 ## intent:mood_unhappy
 - buồn
@@ -66,6 +70,7 @@
 - không ổn lắm
 - cực kỳ buồn
 - chán lắm
+- huhu
 
 ## intent:bot_challenge
 - Bạn là robot à?
