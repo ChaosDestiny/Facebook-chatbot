@@ -1,6 +1,12 @@
 slots:
     name:
         type: text
+    hobby:
+        type: text
+    color:
+        type: text
+    food:
+        type: text
     song:
         type: text
     story:
@@ -11,12 +17,14 @@ intents:
   - goodbye
   - affirm
   - deny
+  - name
+  - hobby
+  - color
+  - food
+  - get_name
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - ask_name
-  - ask_color
-  - ask_food
   - play_music
   - tell_story
 
@@ -24,6 +32,9 @@ entities:
   - name
   - song
   - story
+  - hobby
+  - color
+  - food
     
 responses:
   utter_greet:
@@ -34,7 +45,7 @@ responses:
 
   utter_cheer_up:
   - text: "Mong rằng bức ảnh này sẽ làm bạn vui lên:"
-  image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Bạn có thấy ổn hơn không?"
@@ -44,7 +55,7 @@ responses:
   utter_happy:
   - text: "Tuyệt quá!"
   - text: "Hay quá!"
-  - text: "Tốt rồi."
+  - text: "Tốt quá."
 
   utter_goodbye:
   - text: "Tạm biệt"
@@ -60,10 +71,17 @@ responses:
   utter_ask_name:
   - text: 'Tên bạn là gì?'
   - text: 'Tôi là Luna, tên bạn là gì?'
+  - text: 'Bạn tên là gì?'
+  
+  utter_ask_hobby:
+  - text: 'Sở thích của bạn là gì?'
+  - text: 'Bạn thích làm gì nhất?'
+  - text: 'Bạn có thể cho tôi biết sở thích của bạn là gì không?'
   
   utter_ask_color:
   - text: 'Bạn thích màu gì nhất?'
-  - text: 'Màu sác yêu thích của bạn là gì?'
+  - text: 'Màu sắc yêu thích của bạn là gì?'
+  - text: 'Bạn thích màu sắc gì?'
   
   utter_ask_food:
   - text: 'Bạn thích ăn món gì?'
@@ -71,11 +89,12 @@ responses:
   - text: 'Món ăn yêu thích của bạn là gì?'
   
   utter_ask_action:
-  - text: 'Bạn cần giúp gì không?'
-  - text: 'Bạn cần tôi giúp gì nữa không?'
+  - text: 'Bạn cần giúp gì nữa không?'
+  - text: 'Bạn muốn tôi giúp gì nữa không?'
   - text: 'Tôi có thể giúp gì nữa không?'
   - text: 'Bạn muốn tôi làm gì nữa không?'
   - text: 'Tôi có thể giúp gì cho bạn?'
+  - text: '{name} cần giúp gì nữa không?'  
   
   utter_ask_play_again:
   - text: 'Bạn có muốn nghe lại bài này không?'
@@ -91,8 +110,31 @@ responses:
   utter_suggest_song:
   - text: 'Bạn có muốn nghe một bài hát không?'
   - text: 'Bạn có muốn nghe nhạc không?'
-  - text: 'bạn có muốn tôi phát nhạc cho bạn không?'
-        
+  - text: 'Bạn có muốn tôi phát nhạc cho bạn không?'
+  
+  utter_thanks:
+  - text: "Cảm ơn bạn"
+  - text: "Cảm ơn bạn nhiều"
+  - text: 'Cảm ơn {name}'
+
+  utter_ask_song:
+  - text: "Bạn muốn nghe bài gì?"
+  - text: "Bạn muốn nghe bài hát gì?"
+  - text: "Bạn muốn tôi phát bài gì?"
+  - text: "Bài hát bạn muốn nghe là gì?"
+  
+  utter_ask_story:
+  - text: "Bạn muốn nghe chuyện cổ tích gì?"
+  - text: "Bạn muốn tôi kể câu chuyện gì?"
+  - text: "Câu chuyện bạn muốn nghe là gì?"
+  - text: "Bạn muốn đọc truyện nào?"
+  
+  utter_ask_info:
+  - text: "Tôi có thể hỏi bạn một số câu hỏi được không?"
+  - text: "Tôi hỏi bạn một vài câu hỏi nhé?"
+  - text: "Bạn có thể cho tôi hỏi vài thông tin được không?"
+  - text: "Tôi tìm hiểu một chút về bạn được không?"
+  
 actions:
   - utter_greet
   - utter_cheer_up
@@ -101,13 +143,20 @@ actions:
   - utter_goodbye
   - utter_iamabot
   - utter_ask_name
-  - utter_ask_play_again
-  - utter_ask_action
   - utter_ask_color
   - utter_ask_food
+  - utter_ask_action
+  - utter_ask_play_again
+  - utter_default
   - utter_suggest_song
+  - utter_ask_hobby
+  - utter_thanks
+  - action_check_name
   - action_play_music
   - action_tell_story
+  - utter_ask_song
+  - utter_ask_story
+  - utter_ask_info
     
 session_config:
   session_expiration_time: 60

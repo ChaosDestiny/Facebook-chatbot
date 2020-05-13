@@ -9,6 +9,9 @@
 - hello
 - hey there
 - Xin chào Luna
+- Luna ơi
+- Luna
+- Luna à
 
 ## intent:goodbye
 - Tạm biệt
@@ -16,6 +19,8 @@
 - Hẹn gặp lại
 - Bai bai
 - Chào nhé
+- bye bye
+- goodbye
 
 ## intent:affirm
 - có
@@ -31,16 +36,18 @@
 
 ## intent:deny
 - không
-- đừng
+- Đừng
 - không, cảm ơn
 - không cẩn đâu
-- không cần
+- Không cần
 - no
-- no thanks
+- No thanks
 - no no
 - không cần, cảm ơn nhé
 - chưa
 - Chưa đâu
+- không nói
+- không biết
 
 ## intent:mood_great
 - Rất tốt
@@ -84,9 +91,9 @@
 - Bật bài hát [Faded](song) đi
 - Tôi muốn nghe bài [Come thru](song)
 - Tôi muốn nghe bài [Monody](song)
-- mình muốn nghe bài [Con cò bé bé](song)
+- mình muốn nghe bài [con cò bé bé](song)
 - Tớ muốn nghe bài [Tiến quân ca](song)
-- Tôi muốn nghe bài [Thích thì đến](song)
+- Tôi muốn nghe bài [thích thì đến](song)
 - Bật bài hát [Fly away](song) đi
 - Bật bài hát [Never be alone](song) đi
 - Bật bài hát [That girl](song) đi
@@ -102,15 +109,17 @@
 - Bạn bật bài hát [Bé lên ba](song) được không?
 - Luna tìm bài hát [Thế giới này rộng lớn như vậy nhưng vẫn gặp được anh](song) được không?
 - Bạn bật bài hát [Tát nhật lãng rực rỡ](song) được không?
-- Cậu phát bài hát [Hạ sơn](song) được không?
+- Cậu phát bài hát [hạ sơn](song) được không?
 - Bạn bật bài hát [Mang chủng](song) được không?
 - Bài hát [Hơn cả yêu](song)
 - Bài hát [Thousand year](song)
 - Bài [Gặp người đúng lúc](song)
 - Bài hát [Tâm lặng như nước](song)
-- Bài hát [Kẻ theo đuổi ánh sáng](song)
+- Bài hát [kẻ theo đuổi ánh sáng](song)
 - Phát bài hát [Way back home](song)
 - phát bài hát [Ngẫu hứng](song)
+- Tao muốn nghe bài [bắc kim thang](song)
+- Bật bài nhạc [let me down slowly](song)
 - Bật nhạc cho tớ nghe đi
 - Tớ muốn nghe nhạc
 - Luna bật nhạc được không?
@@ -126,31 +135,143 @@
 - Bạn đọc truyện cổ tích cho tôi được không?
 - Đọc truyện cổ tích cho mình đi
 - Câu chuyện [Cây khế](story)
-- Câu chuyện [Sự tích dưa hấu](story)
+- Câu chuyện [sự tích dưa hấu](story)
 - Câu chuyện [Con rồng cháu tiên](story)
 - Tìm câu chuyện [Tấm cám](story)
 - Kể cho mình truyện [Bạch tuyết và bảy chú lùn](story) đi
-- Kể cho mình truyện [Cô bé lọ lem](story) đi
+- Kể cho mình truyện [cô bé lọ lem](story) đi
 - Kể cho tớ truyện [Mèo đi hia](story) đi
 - Kể cho tôi truyện [Ông lão đánh cá và con cá vàng](story) đi
 - Tôi muốn đọc truyện [Sự tích chim tu hú](story)
-- Tôi muốn đọc truyện [Sự tích con dã tràng](story)
+- Tôi muốn đọc truyện [sự tích con dã tràng](story)
 - tớ muốn đọc truyện [Ba lưỡi rìu](story)
 - Tôi muốn đọc truyện [Cây tre trăm đốt](story)
-- Mình muốn nghe chuyện [Chú cuội cung trăng](story)
+- Mình muốn nghe chuyện [chú cuội cung trăng](story)
 - Mình muốn nghe chuyện [Sự tích ông ba mươi](story)
 - Mình muốn nghe chuyện [Cô bé quàng khăn đỏ](story)
-- Kể câu chuyện [Bánh chưng bánh dày](story) cho mình đi
+- Kể câu chuyện [bánh chưng bánh dày](story) cho mình đi
 - Kể câu chuyện [Công chúa ngủ trong rừng](story) đi
-- Kể câu chuyện [Công chúa tóc dài](story) đi
+- Kể câu chuyện [công chúa tóc dài](story) đi
 - Kể câu chuyện [jack và cây đậu thần](story) đi
-- Tôi thích chuyện [Thạch sanh](story)
+- Mình thích chuyện [Thạch sanh](story)
 - Tôi thích chuyện [Chàng đánh cá và công chúa thủy tề](story)
-- Tôi thích nghe chuyện [Nợ như chúa chổm](story)
+- Tôi thích nghe chuyện [nợ như chúa chổm](story)
 - Tớ thích đọc chuyện [Sự tích cây vú sữa](story)
 - Luna kể cho tớ chuyện [Yết kiêu](story) nhé
-- Luna kể cho tớ chuyện [Nàng tiên cá](story) nhé
-- Luna kể cho tớ chuyện [Sơn tinh thủy tinh](story) nhé
+- Luna kể chuyện [Nàng tiên cá](story) nhé
+- Luna kể cho mình chuyện [sơn tinh thủy tinh](story) nhé
 - Đọc truyện [Thánh gióng](story)
-- Đọc truyện [Sọ dừa](story)
+- Đọc truyện [sọ dừa](story) đi
 - Đọc truyện [Bốn anh tài](story)
+
+## intent:name
+- Tôi là [An](name)
+- Tớ là [Bình](name)
+- Mình là [Cường](name)
+- Tao là [Kẹo](name)
+- I am [Nam](name)
+- My name is [Hoa](name)
+- Tôi tên là [Hùng](name)
+- Tớ tên là [Mạnh](name)
+- Mình tên là [Quỳnh](name)
+- [Bảo](name) là tên tôi
+- Mình tên là [Mạnh An](name)
+- Tên của tôi là [Phương Linh](name)
+- tên của mình là [Hương Giang](name)
+- [Tuấn](name) là tên của tôi
+- [Khánh Vy](name) là tên tớ
+- [Giang](name) là tên tao
+- Tên là [Dũng](name)
+- tôi tên [Minh](name)
+- tớ tên [Nguyễn Văn Sơn](name)
+- mình tên [Alice](name)
+- tao tên [Cathy](name)
+
+## intent:hobby
+- [đá bóng](hobby)
+- tôi thích [nghe nhạc](hobby)
+- tớ thích [xem phim](hobby)
+- mình thích [nấu ăn](hobby)
+- thích [đọc sách](hobby)
+- [chơi game](hobby) là sở thích của tôi
+- [bóng chuyền](hobby) là thứ tớ thích nhất
+- [đá bóng](hobby) is my hobby
+- tao thích [code](hobby)
+- Tôi thích [lập trình](hobby)
+- Tôi yêu [chơi bóng bàn](hobby)
+- Tớ yêu [vẽ tranh](hobby)
+- Tôi thích [hội họa](hobby)
+- Sở thích là [thiết kế](hobby)
+- sở thích [chụp ảnh](hobby)
+- Tôi rất thích [du lịch](hobby)
+- Mình khá thích [đi du lịch](hobby)
+- Tớ thích [ngắm cảnh](hobby)
+- Tớ thích [ngủ](hobby)
+- tôi thích [chơi liên minh](hobby)
+
+## intent:color
+- Màu [đỏ](color)
+- Màu [cam](color)
+- Tôi thích màu [vàng](color)
+- Màu [lục](color) là màu tôi thích
+- Màu [lam](color) là màu tớ thích
+- Màu [chàm](color) là màu mình thích
+- Tớ thích màu [tím](color)
+- Mình thích màu [xanh](color)
+- Mình yêu màu [đen](color)
+- Màu yêu thích của tôi là [nâu](color)
+- Màu yêu thích của tớ là [hồng](color)
+- Màu ưa thích của mình là [xanh lam](color)
+- Tớ thích [xanh lá mạ](color)
+- Tôi thích [đỏ tía](color)
+- mình thích sắc [cam đất](color)
+- Mình ưa màu [vàng nhạt](color)
+- Tôi ưa màu [trắng](color)
+- tớ ưa màu [xanh lục](color)
+- tôi ưa [nâu đỏ](color)
+- tao thích [xanh dương](color)
+- mình chọn [hồng cánh sen](color)
+- tôi chọn màu [hường](color)
+- thích sắc [bạc](color)
+- thích màu [xám](color)
+
+## intent:food
+- Món [tôm](food)
+- Món [mỳ xào](food)
+- Tôi thích ăn [cơm chiên](food)
+- Tớ thích [trứng rán](food)
+- Mình thích [trứng chiên](food)
+- tao thích [đậu phộng](food)
+- tôi thích ăn [lạc](food)
+- tớ thích uống [sữa](food)
+- tớ yêu [sữa chua](food)
+- tôi thèm [kem](food)
+- mình muốn [kem tươi](food)
+- tôi thích món [cá](food)
+- tớ hay ăn [gà](food)
+- mình yêu [thịt lợn](food)
+- tôi thường ăn [thịt chó](food)
+- Tôi thích ăn [thịt bò](food)
+- tao thích ăn [xúc xích](food)
+- [bánh chưng](food) là thứ tôi thích nhất
+- [bánh đa](food) là thứ tớ thích
+- Món [bún](food) là món mình thích
+- [bún cá](food) là món tôi thích
+- tôi khá thích [phở bò](food)
+- [phở](food) rất ngon
+- Món tôi thích là [phở gà](food)
+- Món tớ ưa là [nem chua](food)
+- Món mình thích là [kẹo lạc](food)
+- Món tao thích là[bánh đậu xanh](food)
+- Món tôi thích là [kẹo](food)
+- Món ăn tôi thích là [bánh gato](food)
+- Món ăn tớ thích là [bánh cuốn](food)
+- Món ăn mình thích là [hải sản](food)
+- Món ăn tao thích là [cơm mẹ nấu](food)
+- Món tôi hay ăn là [cháo](food)
+- Món tôi thường ăn là [tiết canh](food)
+- Món tôi thường dùng là [dưa hấu](food)
+- tôi khá thích [táo](food)
+- Mình khá thích [salad](food)
+- tớ khá thích [chuối](food)
+- tôi khá thích [bánh ngọt](food)

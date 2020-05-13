@@ -8,26 +8,34 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import UserUttered, ActionExecuted
 import webbrowser
 import urllib.request
 from bs4 import BeautifulSoup
 
-class ActionHelloWorld(Action):
+class ActionCheckName(Action):
 
     def name(self) -> Text:
-        return "action_hello_world"
+        return "action_check_name"
 
+    @staticmethod
+    def start_story_events(story_intent):
+        # type: (Text) -> List[Dict]
+        return [ActionExecuted("action_listen")] + [UserUttered("/" + story_intent, {
+            "intent": {"name": story_intent, "confidence": 1.0},
+            "entities": {}
+        })]
+    
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text="Hello World!")
-
-        return []
+        name = tracker.get_slot('name')
+        if (name == None):           
+            return self.start_story_events('get_name')
+        else:
+            return []
 
 class ActionPlayMusic(Action):
     
