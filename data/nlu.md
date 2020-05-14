@@ -12,6 +12,7 @@
 - Luna ơi
 - Luna
 - Luna à
+- hi Luna
 
 ## intent:goodbye
 - Tạm biệt
@@ -59,12 +60,37 @@
 - Tôi cảm thấy rất tốt
 - Rất hài lòng
 - tốt
-- ổn
 - Kha khá
 - hihihi
 - Tôi rất vui
 - Mình đang vui
 - Vui lắm
+- hôm nay tớ rất vui
+- Hôm nay tôi đang vui
+- yêu đời ghê
+
+## intent:mood_great_reason
+- Hôm nay mình được khen
+- Hôm nay cô giáo khen tớ vẽ đẹp
+- Cô giáo khen tớ hát hay
+- Mình được điểm cao này
+- Hôm nay tôi được tăng lương
+- Mình đỗ đại học rồi
+- Mình qua môn rồi này
+- Tôi vui vì được ăn ngon
+- tớ vừa có áo mới
+- Mình có người yêu rồi
+- Tôi được thăng chức
+- Mình vừa được đi du lịch
+- Tôi vừa được khen
+- Tớ làm bài kiểm tra được điểm cao
+- Tôi vừa nhặt được tiền
+- Mình vừa đi chơi với người yêu về
+- Tôi có công việc mới rồi
+- Tớ vừa được công ty nhận rồi
+- hôm nay trời rất đẹp
+- thời tiết tốt
+- tự nhiên thấy vui
 
 ## intent:mood_unhappy
 - buồn
@@ -78,6 +104,32 @@
 - cực kỳ buồn
 - chán lắm
 - huhu
+- muốn khóc
+- Không vui
+- Không ổn tý nào
+- Hôm nay tôi buồn
+- Hôm nay tôi rất buồn
+- không vui bạn ạ
+
+## intent:mood_unhappy_reason
+- hôm nay tớ bị điểm kém
+- tôi vừa chia tay người yêu
+- tôi vừa thất nghiệp
+- tao mới bị bồ đá
+- mình trượt môn rồi
+- tớ vừa bị mẹ mắng
+- tớ vừa bị chị quát
+- mình vừa bị bố đánh
+- tôi mới bị tai nạn
+- tôi bị ngã xe
+- mình vừa bị mất tiền
+- tớ hôm nay gặp xui xẻo
+- hôm nay thời tiết rất xấu
+- hàng xóm ồn ào quá
+- tôi rất đau đầu
+- tớ bị đau dạ dày
+- chả có chuyện gì cả
+- tự nhiên thấy chán
 
 ## intent:bot_challenge
 - Bạn là robot à?
@@ -94,9 +146,9 @@
 - mình muốn nghe bài [con cò bé bé](song)
 - Tớ muốn nghe bài [Tiến quân ca](song)
 - Tôi muốn nghe bài [thích thì đến](song)
-- Bật bài hát [Fly away](song) đi
+- phát bài hát [Fly away](song) đi
 - Bật bài hát [Never be alone](song) đi
-- Bật bài hát [That girl](song) đi
+- Mở bài hát [That girl](song) đi
 - Tìm cho tôi bài hát [Breathless](song) đi
 - Tìm bài hát [Until you](song) đi
 - tìm bài hát [Faded](song) đi
@@ -106,7 +158,7 @@
 - Tôi thích bài hát [Một triệu khả năng](song)
 - tớ thích nghe bài hát [Sứ thanh hoa](song)
 - Tôi thích bài hát [Cô gái ấy nói với tôi](song)
-- Bạn bật bài hát [Bé lên ba](song) được không?
+- Bạn bật bài hát [bé lên ba](song) được không?
 - Luna tìm bài hát [Thế giới này rộng lớn như vậy nhưng vẫn gặp được anh](song) được không?
 - Bạn bật bài hát [Tát nhật lãng rực rỡ](song) được không?
 - Cậu phát bài hát [hạ sơn](song) được không?
@@ -119,7 +171,15 @@
 - Phát bài hát [Way back home](song)
 - phát bài hát [Ngẫu hứng](song)
 - Tao muốn nghe bài [bắc kim thang](song)
-- Bật bài nhạc [let me down slowly](song)
+- Bật bài nhạc [hoa sữa](song)
+- Bật bài hát [chúc bé ngủ ngon](song)
+- bài [chiếc khăn gió ấm](song)
+- bài [cầu vồng khuyết](song)
+- bật bài hát [một bước yêu vạn dặm đau](song)
+- bài hát [legends never die](song)
+- Bật bài nhạc [người lạ ơi](song)
+- Bật nhạc [thất tình](song)
+- phát bài hát [người ấy](song)
 - Bật nhạc cho tớ nghe đi
 - Tớ muốn nghe nhạc
 - Luna bật nhạc được không?
@@ -163,6 +223,44 @@
 - Đọc truyện [Thánh gióng](story)
 - Đọc truyện [sọ dừa](story) đi
 - Đọc truyện [Bốn anh tài](story)
+
+## intent:read_poem
+- Tôi muốn đọc thơ
+- Mình muốn thơ
+- Tớ muốn đọc thơ
+- Bạn đọc thơ cho tôi nghe đi
+- Luna đọc thơ cho tớ nghe nhé
+- Bạn đọc thơ được không?
+- Bài thơ [mẹ vắng nhà](poem)
+- bài thơ [tre việt nam](poem)
+- tớ muốn đọc bài [chiếc thuyền đánh cá](poem)
+- tôi muốn đọc bài thơ [nguyên tiêu](poem)
+- mình muốn bài thơ [Bên kia sông đuống](poem)
+- tôi thích bài thơ [Tràng giang](poem)
+- đọc bài thơ [Quê hương](poem)
+- phát bài thơ [Tây tiến](poem) đi
+- Bài thơ [đập đá ở côn lôn](poem) nhé
+- đọc bài thơ [qua đèo ngang](poem) được không
+- Bài thơ [bánh trôi nước](poem) được không
+- bài thơ [đồng chí](poem)
+- đọc cho tôi bài thơ [Đêm nay Bác không ngủ](poem)
+- tìm cho mình bài thơ [khi con tu hú](poem)
+- tớ cần bài thơ [Thu điếu](poem)
+- mình thích bài thơ [thu vịnh](poem)
+- bài thơ [thu ẩm](poem)
+- Luna đọc bài [ông đồ](poem)
+- bài [nhớ rừng](poem)
+- đọc thơ [mẹ](poem)
+- đọc thơ [Áo lụa Hà Đông](poem) đi
+- tôi cần bài thơ [Đất nước](poem)
+- tôi muốn đọc bài [đây thôn Vĩ Dạ](poem)
+- tớ muốn đọc [bếp lửa](poem)
+- mình thích đọc [Nam quốc sơn hà](poem)
+- hãy đọc bài [những bóng người trên sân ga](poem)
+- hãy đọc [dáng đứng Việt Nam](poem)
+- hãy đọc bài thơ [Lượm](poem)
+- hãy đọc bài [bạn đến chơi nhà](poem)
+- Bài [việt bắc](poem)
 
 ## intent:name
 - Tôi là [An](name)
@@ -275,3 +373,10 @@
 - Mình khá thích [salad](food)
 - tớ khá thích [chuối](food)
 - tôi khá thích [bánh ngọt](food)
+
+## intent:using
+- Bạn có thể làm gì?
+- Bạn có chức năng gì?
+- Bạn làm được gì?
+- Chức năng của bạn là gì?
+- Luna làm được những gì?

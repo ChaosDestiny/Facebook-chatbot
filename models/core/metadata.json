@@ -2,21 +2,19 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "name",
         "story",
-        "hobby",
+        "name",
+        "song",
         "color",
+        "poem",
         "food",
-        "song"
+        "hobby"
       ]
     },
     "utter_ask_action": {
       "slots": []
     },
-    "utter_goodbye": {
-      "slots": []
-    },
-    "action_tell_story": {
+    "utter_unhappy": {
       "slots": []
     },
     "utter_happy": {
@@ -28,7 +26,19 @@
     "utter_ask_song": {
       "slots": []
     },
-    "utter_ask_play_again": {
+    "utter_goodbye": {
+      "slots": []
+    },
+    "action_tell_story": {
+      "slots": []
+    },
+    "utter_using": {
+      "slots": []
+    },
+    "utter_ismusic_good": {
+      "slots": []
+    },
+    "utter_ask_story": {
       "slots": []
     }
   },
@@ -36,15 +46,17 @@
   "max_histories": [
     5,
     5,
+    null,
     null
   ],
   "ensemble_name": "rasa.core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
     "rasa.core.policies.memoization.MemoizationPolicy",
     "rasa.core.policies.keras_policy.KerasPolicy",
-    "rasa.core.policies.mapping_policy.MappingPolicy"
+    "rasa.core.policies.mapping_policy.MappingPolicy",
+    "rasa.core.policies.fallback.FallbackPolicy"
   ],
-  "trained_at": "20200513-202415",
+  "trained_at": "20200514-102122",
   "rasa": "1.7.0",
   "tensorflow": "1.15.0",
   "sklearn": "0.20.4"

@@ -11,7 +11,8 @@ slots:
         type: text
     story:
         type: text
-        
+    poem:
+        type: text
 intents:
   - greet
   - goodbye
@@ -23,15 +24,20 @@ intents:
   - food
   - get_name
   - mood_great
+  - mood_great_reason
   - mood_unhappy
+  - mood_unhappy_reason
   - bot_challenge
   - play_music
   - tell_story
-
+  - read_poem
+  - using
+  
 entities:
   - name
   - song
   - story
+  - poem
   - hobby
   - color
   - food
@@ -56,7 +62,13 @@ responses:
   - text: "Tuyệt quá!"
   - text: "Hay quá!"
   - text: "Tốt quá."
-
+  - text: "Vui quá"
+  
+  utter_unhappy:
+  - text: "Tôi rất tiếc :("
+  - text: ":("
+  - text: "Buồn quá"
+  
   utter_goodbye:
   - text: "Tạm biệt"
   - text: "Hẹn gặp lại"
@@ -92,7 +104,7 @@ responses:
   - text: 'Bạn cần giúp gì nữa không?'
   - text: 'Bạn muốn tôi giúp gì nữa không?'
   - text: 'Tôi có thể giúp gì nữa không?'
-  - text: 'Bạn muốn tôi làm gì nữa không?'
+  - text: '{name} muốn tôi làm gì nữa không?'
   - text: 'Tôi có thể giúp gì cho bạn?'
   - text: '{name} cần giúp gì nữa không?'  
   
@@ -128,6 +140,12 @@ responses:
   - text: "Bạn muốn tôi kể câu chuyện gì?"
   - text: "Câu chuyện bạn muốn nghe là gì?"
   - text: "Bạn muốn đọc truyện nào?"
+
+  utter_ask_poem:
+  - text: "Bạn muốn bài thơ gì?"
+  - text: "Bạn muốn tôi đọc bài gì?"
+  - text: "Bài thơ bạn muốn đọc là gì?"
+  - text: "Bạn muốn đọc bài thơ nào?"
   
   utter_ask_info:
   - text: "Tôi có thể hỏi bạn một số câu hỏi được không?"
@@ -135,11 +153,54 @@ responses:
   - text: "Bạn có thể cho tôi hỏi vài thông tin được không?"
   - text: "Tôi tìm hiểu một chút về bạn được không?"
   
+  utter_using:
+  - text: "Tôi có thể trò chuyện, phát nhạc và kể chuyện cổ tích cho bạn"
+
+  utter_ismusic_good:
+  - text: "Bài hát này có hay không?"
+  - text: "Bạn thấy bài hát này hay chứ?"
+  - text: "Bài nhạc này hay chứ?"
+  - text: "Bạn có thích bài hát này không?"
+  
+  utter_isstory_good:
+  - text: "Câu chuyện này có hay không?"
+  - text: "Bạn thấy câu chuyện này hay chứ?"
+  - text: "Câu chuyện này hay chứ?"
+  - text: "Bạn có thích truyện này không?"
+  
+  utter_ispoem_good:
+  - text: "Bài thơ này có hay không?"
+  - text: "Bạn thấy bài thơ này hay chứ?"
+  - text: "Bài thơ này hay chứ?"
+  - text: "Bạn có thích bài thơ này không?"
+  
+  utter_ask_happyreason:
+  - text: "Bạn có gì vui thế?"
+  - text: "Sao bạn vui thế, kể tôi nghe với"
+  - text: "Có chuyện gì vui kể tôi nghe với"
+  
+  utter_ask_unhappyreason:
+  - text: "Có chuyện gì thế?"
+  - text: "Chuyện gì làm bạn buồn vậy?"
+  - text: "Chuyện gì làm bạn không vui vậy?"
+  - text: "Có chuyện gì bạn kể tôi nghe với"
+  
+  utter_ask_tell_again:
+  - text: "Bạn có muốn đọc lại câu chuyện này không?"
+  - text: "Bạn muốn nghe lại câu chuyện này không?"
+  - text: "Bạn có cần tôi đọc lại câu chuyện không?"
+  - text: "Bạn muốn tôi kể lại lần nữa không?"  
+  
+  utter_ask_read_again:
+  - text: "Bạn có muốn đọc lại bài thơ không?"
+  - text: "Bạn có cần tôi đọc lại bài thơ lần nữa không?"
+  
 actions:
   - utter_greet
   - utter_cheer_up
   - utter_did_that_help
   - utter_happy
+  - utter_unhappy
   - utter_goodbye
   - utter_iamabot
   - utter_ask_name
@@ -154,10 +215,20 @@ actions:
   - action_check_name
   - action_play_music
   - action_tell_story
+  - action_read_poem
   - utter_ask_song
   - utter_ask_story
+  - utter_ask_poem
   - utter_ask_info
-    
+  - utter_using
+  - utter_ismusic_good
+  - utter_isstory_good
+  - utter_ispoem_good
+  - utter_ask_happyreason
+  - utter_ask_unhappyreason
+  - utter_ask_tell_again
+  - utter_ask_read_again
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

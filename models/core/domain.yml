@@ -1,16 +1,22 @@
 actions:
 - action_check_name
 - action_play_music
+- action_read_poem
 - action_tell_story
 - utter_ask_action
 - utter_ask_color
 - utter_ask_food
+- utter_ask_happyreason
 - utter_ask_hobby
 - utter_ask_info
 - utter_ask_name
 - utter_ask_play_again
+- utter_ask_poem
+- utter_ask_read_again
 - utter_ask_song
 - utter_ask_story
+- utter_ask_tell_again
+- utter_ask_unhappyreason
 - utter_cheer_up
 - utter_default
 - utter_did_that_help
@@ -18,8 +24,13 @@ actions:
 - utter_greet
 - utter_happy
 - utter_iamabot
+- utter_ismusic_good
+- utter_ispoem_good
+- utter_isstory_good
 - utter_suggest_song
 - utter_thanks
+- utter_unhappy
+- utter_using
 config:
   store_entities_as_slots: true
 entities:
@@ -27,6 +38,7 @@ entities:
 - food
 - hobby
 - name
+- poem
 - song
 - story
 forms: []
@@ -61,7 +73,13 @@ intents:
 - mood_great:
     ignore_entities: []
     use_entities: true
+- mood_great_reason:
+    ignore_entities: []
+    use_entities: true
 - mood_unhappy:
+    ignore_entities: []
+    use_entities: true
+- mood_unhappy_reason:
     ignore_entities: []
     use_entities: true
 - bot_challenge:
@@ -73,12 +91,18 @@ intents:
 - tell_story:
     ignore_entities: []
     use_entities: true
+- read_poem:
+    ignore_entities: []
+    use_entities: true
+- using:
+    ignore_entities: []
+    use_entities: true
 responses:
   utter_ask_action:
   - text: Bạn cần giúp gì nữa không?
   - text: Bạn muốn tôi giúp gì nữa không?
   - text: Tôi có thể giúp gì nữa không?
-  - text: Bạn muốn tôi làm gì nữa không?
+  - text: '{name} muốn tôi làm gì nữa không?'
   - text: Tôi có thể giúp gì cho bạn?
   - text: '{name} cần giúp gì nữa không?'
   utter_ask_color:
@@ -89,6 +113,10 @@ responses:
   - text: Bạn thích ăn món gì?
   - text: Món ăn ưa thích của bạn là gì?
   - text: Món ăn yêu thích của bạn là gì?
+  utter_ask_happyreason:
+  - text: Bạn có gì vui thế?
+  - text: Sao bạn vui thế, kể tôi nghe với
+  - text: Có chuyện gì vui kể tôi nghe với
   utter_ask_hobby:
   - text: Sở thích của bạn là gì?
   - text: Bạn thích làm gì nhất?
@@ -101,11 +129,20 @@ responses:
   utter_ask_name:
   - text: Tên bạn là gì?
   - text: Tôi là Luna, tên bạn là gì?
+  - text: Bạn tên là gì?
   utter_ask_play_again:
   - text: Bạn có muốn nghe lại bài này không?
   - text: Bạn có cần tôi phát lại bài này không?
   - text: Bạn có muốn nghe lại lần nữa không?
   - text: Bạn muốn nghe lại bài hát này chứ?
+  utter_ask_poem:
+  - text: Bạn muốn bài thơ gì?
+  - text: Bạn muốn tôi đọc bài gì?
+  - text: Bài thơ bạn muốn đọc là gì?
+  - text: Bạn muốn đọc bài thơ nào?
+  utter_ask_read_again:
+  - text: Bạn có muốn đọc lại bài thơ không?
+  - text: Bạn có cần tôi đọc lại bài thơ lần nữa không?
   utter_ask_song:
   - text: Bạn muốn nghe bài gì?
   - text: Bạn muốn nghe bài hát gì?
@@ -116,6 +153,16 @@ responses:
   - text: Bạn muốn tôi kể câu chuyện gì?
   - text: Câu chuyện bạn muốn nghe là gì?
   - text: Bạn muốn đọc truyện nào?
+  utter_ask_tell_again:
+  - text: Bạn có muốn đọc lại câu chuyện này không?
+  - text: Bạn muốn nghe lại câu chuyện này không?
+  - text: Bạn có cần tôi đọc lại câu chuyện không?
+  - text: Bạn muốn tôi kể lại lần nữa không?
+  utter_ask_unhappyreason:
+  - text: Có chuyện gì thế?
+  - text: Chuyện gì làm bạn buồn vậy?
+  - text: Chuyện gì làm bạn không vui vậy?
+  - text: Có chuyện gì bạn kể tôi nghe với
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Mong rằng bức ảnh này sẽ làm bạn vui lên:'
@@ -143,8 +190,24 @@ responses:
   - text: Tuyệt quá!
   - text: Hay quá!
   - text: Tốt quá.
+  - text: Vui quá
   utter_iamabot:
   - text: Tôi là bot, được hỗ trợ bởi Rasa.
+  utter_ismusic_good:
+  - text: Bài hát này có hay không?
+  - text: Bạn thấy bài hát này hay chứ?
+  - text: Bài nhạc này hay chứ?
+  - text: Bạn có thích bài hát này không?
+  utter_ispoem_good:
+  - text: Bài thơ này có hay không?
+  - text: Bạn thấy bài thơ này hay chứ?
+  - text: Bài thơ này hay chứ?
+  - text: Bạn có thích bài thơ này không?
+  utter_isstory_good:
+  - text: Câu chuyện này có hay không?
+  - text: Bạn thấy câu chuyện này hay chứ?
+  - text: Câu chuyện này hay chứ?
+  - text: Bạn có thích truyện này không?
   utter_suggest_song:
   - text: Bạn có muốn nghe một bài hát không?
   - text: Bạn có muốn nghe nhạc không?
@@ -153,6 +216,12 @@ responses:
   - text: Cảm ơn bạn
   - text: Cảm ơn bạn nhiều
   - text: Cảm ơn {name}
+  utter_unhappy:
+  - text: Tôi rất tiếc :(
+  - text: :(
+  - text: Buồn quá
+  utter_using:
+  - text: Tôi có thể trò chuyện, phát nhạc và kể chuyện cổ tích cho bạn
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
@@ -170,6 +239,10 @@ slots:
     initial_value: null
     type: rasa.core.slots.TextSlot
   name:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.TextSlot
+  poem:
     auto_fill: true
     initial_value: null
     type: rasa.core.slots.TextSlot
