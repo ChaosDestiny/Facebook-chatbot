@@ -4,9 +4,6 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -54,10 +51,10 @@ class ActionPlayMusic(Action):
             vid = soup.findAll(attrs={'class':'yt-uix-tile-link'})[0]
             url = 'https://www.youtube.com' + vid['href']
             webbrowser.open_new_tab(url)
-            dispatcher.utter_message(text="Của bạn đây: " + url)
+            return dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
             dispatcher.utter_message(text="Bạn muốn nghe bài gì?")
-        return []
+            return [ActionExecuted("action_listen")]
     
 class ActionTellStory(Action):
     def name(self) -> Text:
@@ -80,7 +77,20 @@ class ActionTellStory(Action):
                 tale = soup.find_all("a", limit=20)[14]
                 url = tale['href']   
             webbrowser.open_new_tab(url)
-            dispatcher.utter_message(text="Của bạn đây: " + url)
+            return dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
             dispatcher.utter_message(text="Bạn muốn tôi kể câu chuyện gì?")
-        return []
+            return [ActionExecuted("action_listen")]
+
+class ActionReadPoem(Action):
+    def name(self) -> Text:
+        return "action_read_poem"
+    
+    def run(self, dispatcher, tracker, domain):
+        
+        poem = tracker.get_slot('poem')
+        if (poem != None):
+            return dispatcher.utter_message(text="Đọc bài thơ: " + poem)
+        else:
+            dispatcher.utter_message(text="Bạn muốn tôi đọc bài thơ gì?")
+            return [ActionExecuted("action_listen")]
