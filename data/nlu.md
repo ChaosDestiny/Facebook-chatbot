@@ -13,15 +13,22 @@
 - Luna
 - Luna à
 - hi Luna
+- hú
+- ê
+- êu
+- yo
+- ê Luna
 
 ## intent:goodbye
 - Tạm biệt
 - Chào tạm biệt
 - Hẹn gặp lại
-- Bai bai
 - Chào nhé
 - bye bye
 - goodbye
+- Chào luna nhé
+- Gặp lại sau nhé
+- see you again
 
 ## intent:affirm
 - có
@@ -34,6 +41,9 @@
 - đồng ý
 - yes
 - rồi
+- hay đấy
+- hay
+- ổn đấy
 
 ## intent:deny
 - không
@@ -49,6 +59,7 @@
 - Chưa đâu
 - không nói
 - không biết
+- không được
 
 ## intent:mood_great
 - Rất tốt
@@ -68,6 +79,9 @@
 - hôm nay tớ rất vui
 - Hôm nay tôi đang vui
 - yêu đời ghê
+- good
+- great
+- excellent
 
 ## intent:mood_great_reason
 - Hôm nay mình được khen
@@ -91,6 +105,7 @@
 - hôm nay trời rất đẹp
 - thời tiết tốt
 - tự nhiên thấy vui
+- trời đẹp
 
 ## intent:mood_unhappy
 - buồn
@@ -110,6 +125,13 @@
 - Hôm nay tôi buồn
 - Hôm nay tôi rất buồn
 - không vui bạn ạ
+- bực
+- tức
+- giận
+- bực bội
+- bực tức
+- tức giận
+- chán nản
 
 ## intent:mood_unhappy_reason
 - hôm nay tớ bị điểm kém
@@ -332,6 +354,16 @@
 - tôi chọn màu [hường](color)
 - thích sắc [bạc](color)
 - thích màu [xám](color)
+- [Đỏ](color)
+- [cam](color)
+- [Vàng](color)
+- [lục](color)
+- [lam ](color)
+- [chàm](color)
+- [tím](color)
+- [đen](color)
+- [trắng](color)
+- [cầu vồng](color)
 
 ## intent:food
 - Món [tôm](food)
@@ -380,3 +412,17 @@
 - Bạn làm được gì?
 - Chức năng của bạn là gì?
 - Luna làm được những gì?
+- Menu
+- Nói cho tôi chức năng của bạn
+- Bạn có thể giúp gì cho tôi?
+
+## intent:stop
+- dừng lại
+- stop
+- thôi
+- thôi nào
+- dừng lại đi
+- thôi đi
+- thôi nha
+- dừng
+- stop now

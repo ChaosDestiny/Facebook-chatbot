@@ -32,6 +32,7 @@ intents:
   - tell_story
   - read_poem
   - using
+  - stop
   
 entities:
   - name
@@ -104,9 +105,9 @@ responses:
   - text: 'Bạn cần giúp gì nữa không?'
   - text: 'Bạn muốn tôi giúp gì nữa không?'
   - text: 'Tôi có thể giúp gì nữa không?'
-  - text: '{name} muốn tôi làm gì nữa không?'
+  - text: 'Bạn muốn tôi làm gì nữa không?'
   - text: 'Tôi có thể giúp gì cho bạn?'
-  - text: '{name} cần giúp gì nữa không?'  
+  - text: 'Bạn cần giúp gì nữa không?'  
   
   utter_ask_play_again:
   - text: 'Bạn có muốn nghe lại bài này không?'
@@ -128,6 +129,7 @@ responses:
   - text: "Cảm ơn bạn"
   - text: "Cảm ơn bạn nhiều"
   - text: 'Cảm ơn {name}'
+  - text: "Cảm ơn {name} nhiều"
 
   utter_ask_song:
   - text: "Bạn muốn nghe bài gì?"
@@ -195,6 +197,11 @@ responses:
   - text: "Bạn có muốn đọc lại bài thơ không?"
   - text: "Bạn có cần tôi đọc lại bài thơ lần nữa không?"
   
+  utter_stop:
+  - text: "Được rồi, hãy gọi tôi lúc nào bạn cần."
+  - text: "Ok, tôi vẫn ở đây, nếu cần bạn cứ gọi."
+  - text: "Được rồi, nếu cần bạn cứ gọi, tôi vẫn ở đây."
+  
 actions:
   - utter_greet
   - utter_cheer_up
@@ -228,6 +235,7 @@ actions:
   - utter_ask_unhappyreason
   - utter_ask_tell_again
   - utter_ask_read_again
+  - utter_stop
   
 session_config:
   session_expiration_time: 60

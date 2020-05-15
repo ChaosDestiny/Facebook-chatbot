@@ -27,6 +27,7 @@ actions:
 - utter_ismusic_good
 - utter_ispoem_good
 - utter_isstory_good
+- utter_stop
 - utter_suggest_song
 - utter_thanks
 - utter_unhappy
@@ -97,14 +98,17 @@ intents:
 - using:
     ignore_entities: []
     use_entities: true
+- stop:
+    ignore_entities: []
+    use_entities: true
 responses:
   utter_ask_action:
   - text: Bạn cần giúp gì nữa không?
   - text: Bạn muốn tôi giúp gì nữa không?
   - text: Tôi có thể giúp gì nữa không?
-  - text: '{name} muốn tôi làm gì nữa không?'
+  - text: Bạn muốn tôi làm gì nữa không?
   - text: Tôi có thể giúp gì cho bạn?
-  - text: '{name} cần giúp gì nữa không?'
+  - text: Bạn cần giúp gì nữa không?
   utter_ask_color:
   - text: Bạn thích màu gì nhất?
   - text: Màu sắc yêu thích của bạn là gì?
@@ -208,6 +212,10 @@ responses:
   - text: Bạn thấy câu chuyện này hay chứ?
   - text: Câu chuyện này hay chứ?
   - text: Bạn có thích truyện này không?
+  utter_stop:
+  - text: Được rồi, hãy gọi tôi lúc nào bạn cần.
+  - text: Ok, tôi vẫn ở đây, nếu cần bạn cứ gọi.
+  - text: Được rồi, nếu cần bạn cứ gọi, tôi vẫn ở đây.
   utter_suggest_song:
   - text: Bạn có muốn nghe một bài hát không?
   - text: Bạn có muốn nghe nhạc không?
@@ -216,6 +224,7 @@ responses:
   - text: Cảm ơn bạn
   - text: Cảm ơn bạn nhiều
   - text: Cảm ơn {name}
+  - text: Cảm ơn {name} nhiều
   utter_unhappy:
   - text: Tôi rất tiếc :(
   - text: :(
