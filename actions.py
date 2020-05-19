@@ -91,15 +91,16 @@ class ActionReadPoem(Action):
         poem = tracker.get_slot('poem')
         if (poem != None):
             query = urllib.parse.quote(poem)
-            url = "https://www.google.com/search?q=b%C3%A0i+th%C6%A1+" + query
-            hdr={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',}
-            req = urllib.request.Request(url, None, headers=hdr)
-            response = urllib.request.urlopen(req)
+            url = "https://poem.tkaraoke.com/tim.tho?q=" + query + "&t=2"
+            response = urllib.request.urlopen(url)
             html = response.read()
             soup = BeautifulSoup(html, 'html.parser')
-            web = soup.find_all("a", limit=27)[25]
-            url = web['href']
-            return dispatcher.utter_message(text="Của bạn đây: " + url)
+            web = soup.find_all(attrs={'class':'a-name-poem'})
+            if (len(web) == 0):
+                return dispatcher.utter_message(text="Của bạn đây: " + url)
+            else:
+                url = "https://poem.tkaraoke.com" + web[0]['href']
+                return dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
             dispatcher.utter_message(text="Bạn muốn tôi đọc bài thơ gì?")
             return [ActionExecuted("action_listen")]

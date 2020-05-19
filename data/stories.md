@@ -432,3 +432,11 @@
 ## stop
 * stop
     - utter_stop
+    
+## praise
+* praise
+    - utter_thanks
+    
+## disparage
+* disparage
+    - utter_improve

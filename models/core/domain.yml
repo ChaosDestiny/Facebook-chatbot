@@ -24,6 +24,7 @@ actions:
 - utter_greet
 - utter_happy
 - utter_iamabot
+- utter_improve
 - utter_ismusic_good
 - utter_ispoem_good
 - utter_isstory_good
@@ -99,6 +100,12 @@ intents:
     ignore_entities: []
     use_entities: true
 - stop:
+    ignore_entities: []
+    use_entities: true
+- disparage:
+    ignore_entities: []
+    use_entities: true
+- praise:
     ignore_entities: []
     use_entities: true
 responses:
@@ -197,6 +204,9 @@ responses:
   - text: Vui quá
   utter_iamabot:
   - text: Tôi là bot, được hỗ trợ bởi Rasa.
+  utter_improve:
+  - text: Xin lỗi, tôi sẽ cố gắng cải thiện
+  - text: Xin lỗi bạn, tôi sẽ cố gắng hơn
   utter_ismusic_good:
   - text: Bài hát này có hay không?
   - text: Bạn thấy bài hát này hay chứ?
@@ -223,8 +233,8 @@ responses:
   utter_thanks:
   - text: Cảm ơn bạn
   - text: Cảm ơn bạn nhiều
-  - text: Cảm ơn {name}
-  - text: Cảm ơn {name} nhiều
+  - text: Cảm ơn nhé
+  - text: Tôi cảm ơn
   utter_unhappy:
   - text: Tôi rất tiếc :(
   - text: :(

@@ -33,6 +33,8 @@ intents:
   - read_poem
   - using
   - stop
+  - disparage
+  - praise
   
 entities:
   - name
@@ -128,8 +130,8 @@ responses:
   utter_thanks:
   - text: "Cảm ơn bạn"
   - text: "Cảm ơn bạn nhiều"
-  - text: 'Cảm ơn {name}'
-  - text: "Cảm ơn {name} nhiều"
+  - text: 'Cảm ơn nhé'
+  - text: "Tôi cảm ơn"
 
   utter_ask_song:
   - text: "Bạn muốn nghe bài gì?"
@@ -202,6 +204,10 @@ responses:
   - text: "Ok, tôi vẫn ở đây, nếu cần bạn cứ gọi."
   - text: "Được rồi, nếu cần bạn cứ gọi, tôi vẫn ở đây."
   
+  utter_improve:
+  - text: "Xin lỗi, tôi sẽ cố gắng cải thiện"
+  - text: "Xin lỗi bạn, tôi sẽ cố gắng hơn"
+  
 actions:
   - utter_greet
   - utter_cheer_up
@@ -236,6 +242,7 @@ actions:
   - utter_ask_tell_again
   - utter_ask_read_again
   - utter_stop
+  - utter_improve
   
 session_config:
   session_expiration_time: 60

@@ -245,6 +245,11 @@
 - Đọc truyện [Thánh gióng](story)
 - Đọc truyện [sọ dừa](story) đi
 - Đọc truyện [Bốn anh tài](story)
+- kể chuyện [sọ dừa](story)
+- kể chuyện [nàng bạch tuyến và bảy chú lùn](story)
+- kể chuyện [thạch sanh](story)
+- chuyện [người đẹp và quái vật](story)
+- chuyện [alibaba và 40 tên cướp](story)
 
 ## intent:read_poem
 - Tôi muốn đọc thơ
@@ -306,6 +311,25 @@
 - tớ tên [Nguyễn Văn Sơn](name)
 - mình tên [Alice](name)
 - tao tên [Cathy](name)
+- tôi là [đắc](name)
+- tên [lợi](name)
+- tôi là [phong](name)
+- tao là [khánh](name)
+- mình là [nam](name)
+- tớ là [hiếu](name)
+- tôi tên là [hùng](name)
+- tôi tên [sơn](name)
+- tớ tên [chung](name)
+- tôi tên [tuấn](name)
+- tên [san](name)
+- tên [nhị](name)
+- [khánh](name)
+- [linh](name)
+- [thảo](name)
+- [phương](name)
+- tên [chuẩn](name)
+- là [nghĩa](name)
+- tôi là [chức](name)
 
 ## intent:hobby
 - [đá bóng](hobby)
@@ -426,3 +450,24 @@
 - thôi nha
 - dừng
 - stop now
+- cút
+- cút đi
+
+## intent:praise
+- Luna giỏi quá
+- thông minh đấy
+- làm tốt lắm
+- tốt lắm
+- được đấy
+- giỏi đấy
+
+## intent:disparage
+- ngu
+- kém quá
+- gà
+- ngu quá
+- dốt 
+- kém thế
+- ngu vkl
+- bot gà vậy
+- ngu quá đi
