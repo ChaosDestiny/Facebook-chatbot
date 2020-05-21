@@ -18,6 +18,8 @@
 - êu
 - yo
 - ê Luna
+- chào tôi đi
+- chào đi xem nào
 
 ## intent:goodbye
 - Tạm biệt
@@ -330,6 +332,12 @@
 - tên [chuẩn](name)
 - là [nghĩa](name)
 - tôi là [chức](name)
+- [nam](name)
+- [mạnh](name)
+- [nhật](name)
+- [bảo](name)
+- [thuận](name)
+- [đức](name)
 
 ## intent:hobby
 - [đá bóng](hobby)
@@ -460,6 +468,7 @@
 - tốt lắm
 - được đấy
 - giỏi đấy
+- good boy
 
 ## intent:disparage
 - ngu
@@ -471,3 +480,29 @@
 - ngu vkl
 - bot gà vậy
 - ngu quá đi
+- gà vãi
+- cùi vậy
+- bug quá
+- lỗi nhiều quá
+- bug nhiều vl
+
+## intent:who
+- bạn là ai
+- bạn tên gì
+- bạn tên là gì
+- tên bạn là gì
+- who are you
+- tên gì?
+- bạn tên gì thế?
+
+## intent:who_am_i
+- tôi là ai
+- tôi tên gì?
+- tôi tên là gì
+- biết tao là ai không?
+- biết tôi không?
+- mình là ai
+- tớ tên gì
+- có biết tôi là ai không
+- nói tên tôi xem nào
+- luna biết tôi là ai không?

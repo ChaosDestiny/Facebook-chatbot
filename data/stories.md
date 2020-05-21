@@ -431,12 +431,40 @@
     
 ## stop
 * stop
-    - utter_stop
+  - utter_stop
+ 
+## using
+* greet
+  - utter_greet
+  - action_check_name
+* who
+  - utter_me
+  
+## who_am_i
+* who_am_i
+  - action_your_name
     
 ## praise
 * praise
-    - utter_thanks
+  - utter_thanks
     
 ## disparage
 * disparage
-    - utter_improve
+  - utter_improve
+    
+## who
+* who
+  - utter_me
+    
+## using
+* greet
+  - utter_greet
+  - action_check_name
+* who_am_i
+  - action_your_name
+
+## deny
+* deny
+  - utter_ask_action
+* affirm
+  - utter_suggest_song

@@ -13,6 +13,7 @@ slots:
         type: text
     poem:
         type: text
+        
 intents:
   - greet
   - goodbye
@@ -35,6 +36,8 @@ intents:
   - stop
   - disparage
   - praise
+  - who
+  - who_am_i
   
 entities:
   - name
@@ -208,6 +211,11 @@ responses:
   - text: "Xin lỗi, tôi sẽ cố gắng cải thiện"
   - text: "Xin lỗi bạn, tôi sẽ cố gắng hơn"
   
+  utter_me:
+  - text: "Tôi là Luna"
+  - text: "Tôi là Luna, là một chatbot được hỗ trợ bởi Rasa"
+  - text: "Tôi tên là Luna"
+  
 actions:
   - utter_greet
   - utter_cheer_up
@@ -229,6 +237,7 @@ actions:
   - action_play_music
   - action_tell_story
   - action_read_poem
+  - action_your_name
   - utter_ask_song
   - utter_ask_story
   - utter_ask_poem
@@ -243,6 +252,7 @@ actions:
   - utter_ask_read_again
   - utter_stop
   - utter_improve
+  - utter_me
   
 session_config:
   session_expiration_time: 60

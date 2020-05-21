@@ -72,7 +72,8 @@ class ActionTellStory(Action):
             tale = soup.find_all("a", limit=16)[13]
             url = tale['href']
             if (url.find('video') == -1):
-                return url
+                webbrowser.open_new_tab(url)
+                return dispatcher.utter_message(text="Của bạn đây: " + url)
             else:
                 tale = soup.find_all("a", limit=16)[14]
                 url = tale['href']   
@@ -97,10 +98,26 @@ class ActionReadPoem(Action):
             soup = BeautifulSoup(html, 'html.parser')
             web = soup.find_all(attrs={'class':'a-name-poem'})
             if (len(web) == 0):
+                webbrowser.open_new_tab(url)
                 return dispatcher.utter_message(text="Của bạn đây: " + url)
             else:
                 url = "https://poem.tkaraoke.com" + web[0]['href']
+                webbrowser.open_new_tab(url)
                 return dispatcher.utter_message(text="Của bạn đây: " + url)
         else:
             dispatcher.utter_message(text="Bạn muốn tôi đọc bài thơ gì?")
             return [ActionExecuted("action_listen")]
+        
+class ActionYourName(Action):
+
+    def name(self) -> Text:
+        return "action_your_name"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot('name')
+        if (name == None):           
+            return dispatcher.utter_message(text="Xin lỗi, tôi vẫn chưa biết tên của bạn.")
+        else:
+            return dispatcher.utter_message(text="Bạn là " + name)

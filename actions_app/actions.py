@@ -107,3 +107,17 @@ class ActionReadPoem(Action):
         else:
             dispatcher.utter_message(text="Bạn muốn tôi đọc bài thơ gì?")
             return [ActionExecuted("action_listen")]
+        
+class ActionYourName(Action):
+
+    def name(self) -> Text:
+        return "action_your_name"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot('name')
+        if (name == None):           
+            return dispatcher.utter_message(text="Xin lỗi, tôi vẫn chưa biết tên của bạn.")
+        else:
+            return dispatcher.utter_message(text="Bạn là " + name)

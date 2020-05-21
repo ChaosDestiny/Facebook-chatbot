@@ -125,6 +125,6 @@
             "class": "rasa.nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier"
         }
     ],
-    "trained_at": "20200519-092045",
+    "trained_at": "20200521-171510",
     "rasa_version": "1.7.0"
 }
