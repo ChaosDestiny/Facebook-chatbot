@@ -31,3 +31,37 @@ Trong folder đó sẽ xuất hiện các file:
 * enpoints.yml
 * credentials.yml
 
+### File config.yml
+Đây là nơi cấu hình cho NLU và cả Core, nơi chúng ta lựa chọn ngôn ngữ, model cần thiết.
+```python
+language: "en"
+
+pipeline:
+- name: "WhitespaceTokenizer"
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "CountVectorsFeaturizer"
+- name: "CountVectorsFeaturizer"
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 5
+- name: "EmbeddingIntentClassifier"
+  batch_strategy: sequence
+```
+Vì ta xây dựng bộ dữ liệu từ vựng từ đầu nên việc sử dụng ngôn ngữ tiếng Anh (en) và tiếng Việt (vi) đều được. Pipeline là một quy trình hoàn chỉnh từ lựa chọn Tokenizer, Featurizer, Extractor đến Classiffer, giúp NLU bắt được các intent và entity từ hội thoại.
+```python
+policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy
+  - name: FallbackPolicy
+    nlu_threshold: 0.3
+    core_threshold: 0.3
+    fallback_action_name: "action_default_fallback"
+```
+Policies là các quy ước để Rasa_Core lựa chọn hành động tiếp theo dựa trên các entity và intent đã thu nhận được từ NLU. Chúng ta lần lượt khai báo cái Policy cần thiết. Ở đây, ta dùng một số policy như: MemoizationPolicy (quyết định message đầu ra dựa vào thông tin của những đoạn hội thoại trước đó), KerasPolicy (sử dụng mạng LSTM để tính xác suất đưa ra lựa chọn cho message tiếp theo), MappingPolicy(quyết định message dựa vào dữ liệu đã mapping) và trong trường hợp, việc tính xác suất đầu ra không thể vượt được ngưỡng mà FallbackPolicy đề ra, message trả ra sẽ là một action_default_fallback.
+
+### File nlu.md
+Đây là file data, gồm các câu nói của người dùng đã được gán nhãn intent và entity, dùng để train cho NLU. Data càng phong phú thì khả năng đáp ứng của chatbot càng cao.
+### File 
